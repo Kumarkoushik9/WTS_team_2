@@ -36,7 +36,14 @@
              <mat-form-field >
               
                 <input matInput type="password" placeholder="Confirm Password">
+
               </mat-form-field>
+             
+                <select class="custom-select" (change)="changeRole($event)" formControlName="role" >
+                  <option value="">Select your role</option>
+                  <option *ngFor="let role of roles" [ngValue]="role">{{role}}</option>
+                </select>
+             <br>
 
              <button mat-raised-button type="submit"  >Sign Up</button>
              <br>
