@@ -1,3 +1,4 @@
+
 import { Component, NgModule } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
@@ -8,7 +9,6 @@ import { LoginService } from "../services/login_service";
 
 
 @Component({
-
     selector: 'app-login',
     templateUrl: './signup.component.html',
     styleUrls: ['./signup.component.css']
@@ -18,21 +18,25 @@ import { LoginService } from "../services/login_service";
     
     SignUpForm!: FormGroup;
     isSignUp:any=false;
+
     // roles:any =['Admin','Customer']
     role: any='';
 
     constructor(private router: Router){
+
+   
       this.isSignUp==false
       this.SignUpForm = new FormGroup({
         'fullname': new FormControl( null),
         'email': new FormControl(null),
         'username':new FormControl(null),
         'password':new FormControl(null),
+
         // role:new FormControl(null)
 
       });
       // this.SignUpForm.get('role')?.setValue("")
-      
+
     }
     ngOnInit() {
       // this.SignUpForm = new FormGroup({
@@ -59,6 +63,7 @@ import { LoginService } from "../services/login_service";
       var email=this.SignUpForm?.get('email') as FormControl;
       var username=this.SignUpForm?.get('username') as FormControl;
       var password=this.SignUpForm?.get('password') as FormControl;
+
       // var role = this.SignUpForm?.get('role') as FormControl;
 
       this.isSignUp=true
@@ -69,6 +74,8 @@ import { LoginService } from "../services/login_service";
       //     console.log(data)
       //     this.router.navigate(['/login']);
       // });
+
+     
   
     }
 
@@ -76,6 +83,7 @@ import { LoginService } from "../services/login_service";
         
     }
   
+
   }
 
   // @NgModule({
@@ -86,3 +94,4 @@ import { LoginService } from "../services/login_service";
   //   declarations: [SignupComponent],
   // })
   // export class SignupModule { }
+

@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
+
 import { LoginService } from '../services/login_service';
+
+import { FormsModule } from '@angular/forms';
+import { LoginService } from '../services/login_service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-login',
@@ -10,20 +16,24 @@ import { LoginService } from '../services/login_service';
 export class LoginComponent {
   constructor(){
 
-    console.log("kkkk")
-
   }
   
+ 
 
+  // onSubmit(input_data:any){
 
-  onSubmit(input_data:any){
-
-    // console.log(input_data)
-    // console.log("Hello World")
-    // this.loginservice.create_account(input_data)
-    // .subscribe((data: any) => {
+  //   console.log(input_data)
+  //   console.log("Hello World")
+  //   this.loginservice.create_account(input_data)
+  //   .subscribe((data: any) => {
         
-    // });
-  }
+  //   });
+
+  // }
+
 
 }
+
+
+
+
