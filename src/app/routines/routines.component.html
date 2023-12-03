@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="cls1">
+      <h2> Routines </h2>
+      <p> “There's no secret formula. lift heavy, work hard, and aim to be the best."</p>
+    </div>
+    <div class="cls4" style="flex-direction: col;">
+        <h2 style="padding-left: 500px;"> My Routines</h2>
+        <div class="overlay"></div>
+        <div style="padding-left: 1200px;">
+
+          <div class="dropdown">
+            <!-- <button class="btn" (click)="toggleDropdown()">Toggle Dropdown</button> -->
+            <button  cls="cls5" (click)="toggleDropdown()" style="background-color: #78eb9c; height: 40px; weight:30px;  ">  + Add Routine</button>
+
+            <div *ngIf="isDropdownOpen" class="dropdown-content">
+              <!-- Dropdown content goes here -->
+              <a href="#">Recharge and Reset</a>
+              <a href="#">Strength and Flexibility Mix</a>
+              <a href="#">TKO Kickboxing</a>
+              <a href="#"> Couch to Functionally Fit</a>
+            </div>
+          </div>
+
+
+        <!-- <button  cls="cls5" style="background-color: #78eb9c; height: 40px; weight:30px;  ">  + Add Routine</button> -->
+      </div>
+    </div>
+    <div class="cls2">
+    <div *ngFor="let routine of routines" class="routine-card" [ngStyle]="{'background-color': routine.color}">
+      <div class="cls3">
+        <h3>{{ routine.name }}</h3>
+      </div>
+      <div>
+      <p style="padding-left: 40px;">{{ routine.duration }}</p>
+      
+      <p>{{ routine.status }}</p>
+     
+      <p *ngIf="!routine.inProgress"> InProgress : 0</p>
+      <button *ngIf="!routine.inProgress">Start</button>
+      <p  *ngIf="routine.inProgress"> InProgress : 1</p>
+      <button *ngIf="routine.inProgress">Continue</button>
+    </div>
+    </div>
+</div>
+  </div>

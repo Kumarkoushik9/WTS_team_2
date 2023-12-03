@@ -1,0 +1,26 @@
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    padding-top: 20px;
+    padding-left: 0%;
+    background-color: whitesmoke;
+    width: 10000px;
+    height: 800px;
+  }
+  .cls1{
+    text-align: center;
+    background-color: rgb(44, 63, 70);
+    color: white;
+    height: 100px;
+    padding-top: 6px;
+  }
+  .main{
+    padding-top: 20px;
+    
+  }
+  video{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
