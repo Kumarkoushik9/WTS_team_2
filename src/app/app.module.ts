@@ -11,6 +11,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+// import { LoginService } from './services/login_service';
+import { HomePageComponent } from './homepage/homepage.component';
+import { SignupModule } from './signup/signup.component.module';
 
 
 
@@ -18,7 +24,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    SignupModule
   ],
   providers: [],
   bootstrap: [AppComponent]

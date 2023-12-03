@@ -1,0 +1,46 @@
+<!-- <div class="container">
+    <div class="cls1">
+        <h2> Meal Plans </h2>
+        <p> A good meal plan subscription is the ultimate gift for your health.</p>
+    </div>
+    <div class="main">
+        <br>
+
+             <img src="../assets/images/mealplan1.jpeg" alt="Girl in a jacket" width="500" height="600">
+            <img src="../assets/images/mealplan2.png" alt="Girl in a jacket" width="500" height="600">
+
+            <img src="../assets/images/mealplan3.webp" alt="Girl in a jacket" width="500" height="600">
+
+            <img src="../assets/images/mealplan4.png" alt="Girl in a jacket" width="500" height="600">
+            <img src="../assets/images/mealplan5.png" alt="Girl in a jacket" width="500" height="600"> -->
+<!-- 
+
+    </div>
+
+    <div class="image-slider">
+        <div class="image-container" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+          <div *ngFor="let image of images; let i = index" class="image">
+            <img [src]="image" alt="Image {{i + 1}}" />
+          </div>
+        </div>
+        <button (click)="prevImage()" class="nav-button prev">Previous</button>
+        <button (click)="nextImage()" class="nav-button next">Next</button>
+      </div>
+</div> --> 
+
+<div class="container">
+    <div class="cls1">
+      <h2> Meal Plans </h2>
+      <p> A good meal plan subscription is the ultimate gift for your health.</p>
+    </div>
+    <div class="image-slider">
+      <div class="image-container" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+        <div *ngFor="let image of images; let i = index" class="image">
+          <img [src]="image" alt="Image {{i + 1}}" />
+        </div>
+      </div>
+      <button (click)="prevImage()" class="nav-button prev" >Previous</button>
+      <button (click)="nextImage()" class="nav-button next">Next</button>
+    </div>
+  </div>
+  
