@@ -45,6 +45,10 @@
                 </select>
              <br>
 
+             <div *ngIf="uniqueProblem">
+             <body text="red">{{problemMessage}}</body><p>
+             </div>
+
              <button mat-raised-button type="submit"  >Sign Up</button>
              <br>
             
@@ -58,7 +62,7 @@
         <br>
         <!-- <textarea class="textarea"> -->
         <ul class="textarea">
-            <li >Customizable Fitness Calender </li>
+            <li >Customizable Fitness Calendar </li>
             <br>
             <li >Daily Progress Tracking </li>
             <br>

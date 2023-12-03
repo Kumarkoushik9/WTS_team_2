@@ -1,0 +1,8 @@
+<h2>Messages Between You and {{messager}}</h2>
+<ul class="messages">
+    <li *ngFor="let message of messages">
+        <span class="username">{{message[0]}}: {{message[1]}}</span>
+    </li>
+</ul>
+<input [(ngModel)]="toMessage" placeholder="Message">
+<button (click)="sendMessage()">Send Message</button>
