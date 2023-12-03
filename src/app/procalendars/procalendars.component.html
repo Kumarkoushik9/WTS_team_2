@@ -1,0 +1,8 @@
+<h2>Professional Calendar List</h2>
+<ul class="chat">
+    <li *ngFor="let user of list" (click)="viewCalendar(user)">
+        <button type="button">
+            <span class="username">{{user}}</span>
+        </button>
+    </li>
+</ul>
