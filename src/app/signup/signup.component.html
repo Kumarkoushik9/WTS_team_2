@@ -1,4 +1,8 @@
-<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill class="main-div">
+
+
+
+
+ <div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill class="main-div">
  
   <div class="container">
     <div>
@@ -18,7 +22,10 @@
       </mat-toolbar>
       <form fxLayoutAlign="stretch" fxLayout="column" class="form-div" [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
        
-        <input matInput placeholder="Full Name" id="fullname" formControlName="fullname" style="padding-left:30px; margin-bottom: 25px; font-size: medium;">
+        <!-- <mat-form-field style="padding-left:30px;"> -->
+          <input matInput placeholder="Full Name" id="fullname" formControlName="fullname" style="padding-left:30px; margin-bottom: 25px; font-size: medium;">
+        <!-- </mat-form-field> -->
+        
 
         <!-- <mat-form-field style=" padding-left:30px; " > -->
         <input matInput placeholder="Email"  id="email" formControlName="email"  style=" padding-left:30px; font-size: medium; margin-bottom: 25px;"> 
@@ -36,12 +43,11 @@
         <input matInput type="password" placeholder="Confirm Password"  style="padding-left:30px; font-size: medium; margin-bottom: 25px;">
        <!-- </mat-form-field> -->
 
+       <div *ngIf="uniqueProblem">
+        <body text="red">{{problemMessage}}</body><p>
+        </div>
         <!-- <mat-form-field style=" padding-left:30px; "> -->
-        
-          <div *ngIf="uniqueProblem">
-            <body text="red">{{problemMessage}}</body><p>
-            </div>
-          <button mat-raised-button type="submit" routerLink="/login"  style="padding-left:30px; font-weight:bold; font-size: medium; width:150px; background-color: rgb(122, 122, 123); margin-bottom: 25px;">Sign Up</button>
+        <button mat-raised-button type="submit" routerLink="/login"  style="padding-left:30px; font-weight:bold; font-size: medium; width:150px; background-color: rgb(122, 122, 123); margin-bottom: 25px;">Sign Up</button>
       <!-- </mat-form-field> -->
       </form>
   </mat-card>
