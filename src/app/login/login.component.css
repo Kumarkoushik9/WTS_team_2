@@ -55,9 +55,9 @@
 .toolbar{
    text-align: center;
 }
-.mat-typography{
+/* .mat-typography{
     background-image: url('./login_page_background.jpeg');
-}
+} */
 .login-div {
     margin-top: 0px;
     text-align: top;
