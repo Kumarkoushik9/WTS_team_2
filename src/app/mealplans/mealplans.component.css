@@ -1,0 +1,183 @@
+/* .container {
+    max-width: 1350px;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    /* padding-top: 20px;
+    padding-left: 0%;
+    background-color: whitesmoke;
+    width: 10000px;
+    height: 800px;
+  }
+  .cls1{
+    text-align: center;
+    background-color: rgb(44, 63, 70);
+    color: white;
+    height: 100px;
+    padding-top: 6px;
+  } */
+  /* img{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+} */
+/* .main{
+    padding-top: 20px;
+    
+  }
+
+  .image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .image {
+    width: 100%;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+   /* */ 
+/* .container {
+    max-width: 1350px;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    /* padding-top: 20px;
+    padding-left: 0%;
+    background-color: whitesmoke;
+    width: 10000px;
+    height: 800px;
+  }
+  .cls1{
+    text-align: center;
+    background-color: rgb(44, 63, 70);
+    color: white;
+    height: 100px;
+    padding-top: 6px;
+  }
+  
+  .image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .image {
+    flex: 0 0 100%;
+  }
+  
+  img {
+    width: 800px;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+   */ 
+
+   .container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+  }
+  
+  .cls1 {
+    text-align: center;
+    background-color: rgb(44, 63, 70);
+    color: white;
+    height: 100px;
+    padding-top: 6px;
+  }
+  
+  .image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* margin-bottom: 40px; Added margin at the bottom to create space for buttons */
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .image {
+    flex: 0 0 100%;
+  }
+  
+  img {
+    width: 800px;
+    height: 650px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  
+  .nav-button {
+    position: absolute;
+    bottom: 20px; /* Adjust the bottom value as needed */
+    color: #04060f;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .prev {
+    left: 1170px; /* Adjust the left value as needed */
+    bottom: 30px;
+}
+  
+  .next {
+    right: 20px; /* Adjust the right value as needed */
+    bottom: 30px;
+  }
+ 

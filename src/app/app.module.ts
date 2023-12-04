@@ -21,8 +21,11 @@ import { MessageComponent } from './message/message.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProcalendarsComponent } from './procalendars/procalendars.component';
 
+// import { LoginService } from './services/login_service';
+import { HomePageComponent } from './homepage/homepage.component';
+import { SignupModule } from './signup/signup.component.module';
 
-
+import { LoginService } from './services/login_service';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { ProcalendarsComponent } from './procalendars/procalendars.component';
     MessageComponent,
     CalendarComponent,
     ProcalendarsComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,7 @@ import { ProcalendarsComponent } from './procalendars/procalendars.component';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
+    SignupModule,
     MatIconModule,
     FormsModule,
     HttpClientModule,

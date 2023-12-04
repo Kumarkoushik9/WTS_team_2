@@ -1,11 +1,14 @@
-import { Component } from "@angular/core";
+
+import { Component, NgModule } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
-import { LoginService } from "../services/login_service";
-import { FormControl, FormGroup, Validators,ReactiveFormsModule } from "@angular/forms";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import {Router} from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { UserService } from "../user.service";
+import { LoginService } from "../services/login_service";
+
+
 
 @Component({
     selector: 'app-login',
@@ -27,6 +30,7 @@ import { UserService } from "../user.service";
     emailList: String[] = []
 
     constructor(private loginservice : LoginService,private router: Router, private httpClient: HttpClient, private userService: UserService ){
+
       this.isSignUp==false
       this.SignUpForm = new FormGroup({
         'fullname': new FormControl( null),
@@ -35,10 +39,9 @@ import { UserService } from "../user.service";
         'password':new FormControl(null),
         'cPassword':new FormControl(null),
         role:new FormControl(null)
-
       });
-      this.SignUpForm.get('role')?.setValue("")
-      
+      // this.SignUpForm.get('role')?.setValue("")
+
     }
     ngOnInit() {
       // this.SignUpForm = new FormGroup({
@@ -136,7 +139,7 @@ import { UserService } from "../user.service";
         });
         this.router.navigate(['/login']);
       }
-    
+   
   
     }
 
@@ -144,4 +147,15 @@ import { UserService } from "../user.service";
         
     }
   
+
   }
+
+  // @NgModule({
+  //   imports: [
+  //     // other imports
+  //     ReactiveFormsModule,
+  //   ],
+  //   declarations: [SignupComponent],
+  // })
+  // export class SignupModule { }
+
