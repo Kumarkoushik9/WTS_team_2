@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';  
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatToolbarModule,
     MatCardModule,
+    CommonModule
   ],
   exports: [
     SignupComponent,
