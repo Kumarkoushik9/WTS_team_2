@@ -1,0 +1,24 @@
+<div *ngIf="!validUser">
+    <h2>Error the user you are trying to access is not available</h2>
+</div>
+<div *ngIf="validUser">
+    <h2>Calendar</h2>
+    <p><button (click)="goToProCalendars()">View Professionals Calendars</button></p>
+    <div *ngIf="!addEvent">
+        <button (click)="swapAddEvent()">Add New Event</button>
+    </div>
+    <div *ngIf="addEvent">
+        <p>New Event</p>
+        <p>
+            <input [(ngModel)]="eventName" placeholder="Event Name">
+            <input type="date" id="addDate" name="addDate">
+            <button (click)="addNewEvent()">Add Event</button>
+        </p>
+        <button (click)="swapAddEvent()">Cancel</button>
+    </div>
+    <ul class="events">
+        <li *ngFor="let event of eventList">
+            <span class="username">{{event[1]}}-{{event[2]}}-{{event[0]}}: {{event[3]}}</span>
+        </li>
+    </ul>
+</div>
