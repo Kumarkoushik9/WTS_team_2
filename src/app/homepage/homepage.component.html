@@ -25,14 +25,25 @@
         <!-- Add the necessary input fields for different search criteria -->
       </div>
     <section class="hero">
-      <p style="font-weight: bold;">Welcome to Your Wellness Tracker</p>
+      <!-- <p style="font-weight: bold;">Welcome to Your Wellness Tracker</p> -->
       <!-- <p>Keep track of your progress and stay motivated on your wellness journey.</p>
       <a href="#" class="btn">Get Started</a> -->
      
       <!-- <img src="./img2.jpeg" alt="Girl in a jacket" width="500" height="600"> -->
+      <div class="search-container">
+      
+        <mat-form-field class="search-bar">
+          <input matInput [(ngModel)]="searchQuery" placeholder="Search"  (input)="srch($event)">
+        </mat-form-field>
+      
+        <button mat-button class="search-button"  (click)="search()" style="color: rgb(18, 21, 23); font-weight: bold; width: 90px; background-color: rgb(160, 160, 174); ">Search</button>
+        
+      </div>
+          <p style="font-size: medium;">Please type "yoga" if yo want specifically yoga related stuff and click on search button. Else type "fitness" and search </p>
+        
       <div>
-      <img src="../assets/images/img3.jpeg" alt="Girl in a jacket" width="500" height="600">
-      <video width="640" height="360" controls>
+      <img   *ngIf="Isfitness" src="../assets/images/img3.jpeg" alt="Girl in a jacket" width="500" height="600">
+      <video  *ngIf="Isyoga" width="640" height="360" controls>
         <source src="assets/images/video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -43,18 +54,26 @@
 
     <div>
         <p> “I don’t run to add days to my life, I run to add life to my days.”</p>
-        <img src="../assets/images/img2.jpeg" alt="Girl in a jacket" width="500" height="600">
-        <img src="../assets/images/img4.jpeg" alt="Girl in a jacket" width="500" height="600">
-        <img src="../assets/images/img6.jpeg" alt="Girl in a jacket" width="500" height="600">
+        <img *ngIf="Isyoga" src="../assets/images/img2.jpeg" alt="Girl in a jacket" width="500" height="600">
+        <img *ngIf="Isyoga" src="../assets/images/img4.jpeg" alt="Girl in a jacket" width="500" height="600">
+        <img  *ngIf="Isfitness" src="../assets/images/img6.jpeg" alt="Girl in a jacket" width="500" height="600">
+
+        <img  *ngIf="Isfitness" src="../assets/images/img7.png" alt="Girl in a jacket" width="500" height="600">
+        <img  *ngIf="Isfitness" src="../assets/images/img8.jpeg" alt="Girl in a jacket" width="500" height="600">
+
 
        <p>“Don’t dream of winning. Train for it!” </p>
         <p> “Life is like riding a bicycle. To keep your balance, you must keep moving.” </p> 
 
-        <video width="640" height="360" controls>
+        <video   *ngIf="Isfitness" width="640" height="360" controls>
             <source src="assets/images/video1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video width="640" height="360" controls>
+          <video   *ngIf="Isfitness" width="640" height="360" controls>
+            <source src="assets/images/video8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video   *ngIf="Isyoga" width="640" height="360" controls>
             <source src="assets/images/video3.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
