@@ -29,7 +29,6 @@ import { SignupModule } from './signup/signup.component.module';
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent,
     ChatComponent,
     MessageComponent,
     CalendarComponent,
