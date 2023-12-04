@@ -25,8 +25,6 @@ const routes: Routes = [
   {path: 'customworkouts', component: CustomWorkoutVideosComponent},
   {path: 'routines', component: RoutinesComponent},
 
- 
-
   {path : 'chat/:user', component: ChatComponent},
   {path : "chat/:userOne/:userTwo", component: MessageComponent},
   {path : "calendar/:user", component: CalendarComponent},

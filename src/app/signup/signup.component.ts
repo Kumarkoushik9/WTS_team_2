@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { UserService } from "../user.service";
 
+
 @Component({
     selector: 'app-login',
     templateUrl: './signup.component.html',
@@ -37,6 +38,7 @@ import { UserService } from "../user.service";
         'password':[''],
 
         // role:new FormControl(null)
+
 
       });
       // this.SignUpForm.get('role')?.setValue("")
@@ -138,7 +140,7 @@ import { UserService } from "../user.service";
         });
         this.router.navigate(['/login']);
       }
-    
+
   
     }
 
