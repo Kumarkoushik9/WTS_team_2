@@ -25,15 +25,31 @@ import { ProcalendarsComponent } from './procalendars/procalendars.component';
 import { HomePageComponent } from './homepage/homepage.component';
 import { SignupModule } from './signup/signup.component.module';
 
+
+
+// import { LoginService } from './services/login_service';
+import { ChatComponent } from './chat/chat.component';
+import { MessageComponent } from './message/message.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ProcalendarsComponent } from './procalendars/procalendars.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+
     ChatComponent,
     MessageComponent,
     CalendarComponent,
     ProcalendarsComponent,
+
     HomePageComponent,
+    
+    ChatComponent,
+    MessageComponent,
+    CalendarComponent,
+    ProcalendarsComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +68,7 @@ import { SignupModule } from './signup/signup.component.module';
     ReactiveFormsModule,
 
   ],
-  providers: [ LoginService],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

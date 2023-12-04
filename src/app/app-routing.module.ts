@@ -6,6 +6,7 @@ import { ChatComponent } from './chat/chat.component';
 import { MessageComponent } from './message/message.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProcalendarsComponent } from './procalendars/procalendars.component';
+
 import { HomePageComponent } from './homepage/homepage.component';
 import { WorkoutVideosComponent } from './workout_videos/workout_videos.component';
 import { MealPlansComponent } from './mealplans/mealplans.component';
@@ -23,10 +24,12 @@ const routes: Routes = [
   {path: 'mealplans', component: MealPlansComponent},
   {path: 'customworkouts', component: CustomWorkoutVideosComponent},
   {path: 'routines', component: RoutinesComponent},
+
   {path : 'chat/:user', component: ChatComponent},
   {path : "chat/:userOne/:userTwo", component: MessageComponent},
   {path : "calendar/:user", component: CalendarComponent},
   {path : "professionalcalendars/:user", component: ProcalendarsComponent}
+
 ];
 
 @NgModule({
