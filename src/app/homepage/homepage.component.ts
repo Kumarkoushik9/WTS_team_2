@@ -13,6 +13,9 @@ import { every } from "rxjs";
     Isyoga: boolean = true;
     Isfitness: boolean = true;
     inp:string=''
+    constructor(){
+      this.inp=""
+    }
 
     srch(data:any){
       
