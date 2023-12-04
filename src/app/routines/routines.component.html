@@ -4,28 +4,64 @@
       <h2> Routines </h2>
       <p> “There's no secret formula. lift heavy, work hard, and aim to be the best."</p>
     </div>
-    <div class="cls4" style="flex-direction: col;">
+   
+    <!-- <div *ngIf="this.isOverlayOpen" class="cls4" style="flex-direction: col;">
         <h2 style="padding-left: 500px;"> My Routines</h2>
-        <div class="overlay"></div>
-        <div style="padding-left: 1200px;">
+        <div class="overlay">
+          <form>
+            <label for="routineName">Routine Name:</label>
+            <input type="text" id="routineName" name="routineName"  (input)="srch1($event) "required>
+
+            
+            <label for="routineDuration">Routine Duration:</label>
+            <input type="text" id="routineDuration" name="routineDuration" (input)="srch2($event) " required>
+            <label for="routineDuration">Routine Status:</label>
+            <input type="text" id="routineDuration" name="routineDuration"  (input)="srch3($event) " required>
+            <label for="routineDuration">Routine InPogress:</label>
+            <input type="text" id="routineDuration" name="routineDuration"  (input)="srch4($event) " required>
+            <label for="routineDuration">Routine Color:</label>
+            <input type="text" id="routineDuration" name="routineDuration" (input)="srch5($event) " required>
+
+    
+            Add other fields as needed -->
+    
+            <!-- <button type="button" (click)="addRoutine()">Add Routine</button>
+          </form> -->
+
+       
+        <p style="padding-left: 300px; padding-top:20px;"> Select a routine of your wish  from the dropdown and start your work.</p>
+
+        <div style=" padding-left: 1000px;  font-weight: bold;">
+          <select class="custom-select" (change)="addRoutine($event)" formControlName="routine" style="padding-left: 900px; font-size: 16px; padding: 10px; background-color: rgb(151, 151, 163);">
+            <option value="" style="padding-left: 900px; font-weight: bold;">Select a Routine</option>
+            <option *ngFor="let routine of addRoutines" [ngValue]="routine">{{routine}}</option>
+          </select>
+          <br>
+        </div>
+        <img   *ngIf="isempty" src="../assets/images/rout_img.webp" alt="Girl in a jacket" style="width:500px; height:400px; padding-top:60px; padding-left:400px">
+
+        
+        <!-- <div style="padding-left: 1200px;">
 
           <div class="dropdown">
-            <!-- <button class="btn" (click)="toggleDropdown()">Toggle Dropdown</button> -->
-            <button  cls="cls5" (click)="toggleDropdown()" style="background-color: #78eb9c; height: 40px; weight:30px;  ">  + Add Routine</button>
+             <button class="btn" (click)="toggleDropdown()">Toggle Dropdown</button> -->
+            <!-- <button  cls="cls5" (click)="toggleOverlay()" style="background-color: #78eb9c; height: 40px; weight:30px;  ">  + Add Routine</button> -->
 
-            <div *ngIf="isDropdownOpen" class="dropdown-content">
-              <!-- Dropdown content goes here -->
-              <a href="#">Recharge and Reset</a>
+            <!-- <div *ngIf="isDropdownOpen" class="dropdown-content">
+               Dropdown content goes here -->
+              <!-- <a href="#">Recharge and Reset</a>
               <a href="#">Strength and Flexibility Mix</a>
               <a href="#">TKO Kickboxing</a>
               <a href="#"> Couch to Functionally Fit</a>
             </div>
-          </div>
+          </div> -->
 
 
-        <!-- <button  cls="cls5" style="background-color: #78eb9c; height: 40px; weight:30px;  ">  + Add Routine</button> -->
-      </div>
-    </div>
+      <!-- </div>  -->
+    <!-- </div>
+    <div style="padding-left: 1150px; padding-top: 50px;">
+    <button  cls="cls5" (click)="toggleOverlay()" style="background-color: #78eb9c; height: 40px; weight:30px;  ">  + Add Routine</button>
+  </div> -->
     <div class="cls2">
     <div *ngFor="let routine of routines" class="routine-card" [ngStyle]="{'background-color': routine.color}">
       <div class="cls3">
@@ -43,4 +79,4 @@
     </div>
     </div>
 </div>
-  </div>
+<!-- </div> -->
