@@ -2,7 +2,7 @@
 import { Component, NgModule } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormControl, FormGroup, Validators,ReactiveFormsModule } from "@angular/forms";
 import {Router} from '@angular/router';
 import { LoginService } from "../services/login_service";
 
@@ -22,15 +22,15 @@ import { LoginService } from "../services/login_service";
     // roles:any =['Admin','Customer']
     role: any='';
 
-    constructor(private router: Router){
+    constructor(private router: Router, private fb: FormBuilder){
 
    
       this.isSignUp==false
-      this.SignUpForm = new FormGroup({
-        'fullname': new FormControl( null),
-        'email': new FormControl(null),
-        'username':new FormControl(null),
-        'password':new FormControl(null),
+      this.SignUpForm = this.fb.group({
+        'fullname': ['',Validators.required],
+        'email': [''],
+        'username':[''],
+        'password':[''],
 
         // role:new FormControl(null)
 
@@ -72,9 +72,9 @@ import { LoginService } from "../services/login_service";
       // this.loginservice.create_account(input_data)
       // .subscribe((data: any) => {
       //     console.log(data)
-      //     this.router.navigate(['/login']);
+          // this.router.navigate(['/login']);
       // });
-
+      this.router.navigate(['/login']);
      
   
     }

@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatToolbarModule,
     MatCardModule,
+    
   ],
   exports: [
     SignupComponent,
