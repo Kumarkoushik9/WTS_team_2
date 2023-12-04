@@ -23,6 +23,27 @@ def insertUserInfo(name, email, username, password, role):
     cursor.close()
     connection.close()
 
+def getUserInfo():
+    list = []
+    connection = psycopg2.connect(user="team2",
+                                  password="q8QkJWu5LzF0rHtjGhxc0egteyw9Zk5f",
+                                  host="dpg-ckc404esmu8c73didn0g-a.ohio-postgres.render.com",
+                                  port="5432",
+                                  database="wellnessappdb")
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM userinfo")
+    users = cursor.fetchall()
+    for u in users:
+        user = []
+        user.append(u[1])
+        user.append(u[2])
+        user.append(u[3])
+        list.append(user)
+    print(users)
+    cursor.close()
+    connection.close()
+    return list
+
 def deleteUserInfo(username):
     connection = psycopg2.connect(user="team2",
                                   password="q8QkJWu5LzF0rHtjGhxc0egteyw9Zk5f",
@@ -114,7 +135,7 @@ def getChatList(user):
                                   port="5432",
                                   database="wellnessappdb")
     cursor = connection.cursor()
-    cursor.execute("select distinct u.username from userinfo u, userinfo i, messages m where i.username = '%s' and u.username <> i.username and (u.role = 'Professional' or (i.username = m.mto and u.username = m.mfrom))"%(user))
+    cursor.execute("select distinct u.username from userinfo u, userinfo i, messages m where i.username = '%s' and u.username <> i.username and (u.role = 'Professional' or (i.username = m.mto and u.username = m.mfrom)) and u.role != 'Admin'"%(user))
     users = cursor.fetchall()
     for u in users:
         list.append(u[0])
@@ -210,6 +231,11 @@ def getCalendarEvents(user):
 def allUsers(): 
     userList = getUserList()
     return jsonify(userList)
+
+@app.route('/userInfo', methods=['GET']) 
+def allUserinfo(): 
+    userInfoList = getUserInfo()
+    return jsonify(userInfoList)
 
 @app.route('/emails', methods=['GET']) 
 def allEmails(): 

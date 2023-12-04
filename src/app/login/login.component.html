@@ -15,16 +15,19 @@
         <form  fxLayoutAlign="stretch" fxLayout="column" class="form-div">
             <mat-form-field >
               
-              <input matInput placeholder="Username" >
+              <input matInput [(ngModel)]="username" placeholder="Username" name = 'username'>
             </mat-form-field>
           
             <mat-form-field >
              
-              <input matInput type="password" placeholder="Password">
+              <input matInput [(ngModel)]="password" type="password" placeholder="Password" name = 'password'>
             </mat-form-field>
-            <button mat-raised-button type="submit" routerLink="/homepage" >Login</button>
+            <button mat-raised-button type="submit" (click)="login()" >Login</button>
             <p></p>
             <a href="" class="signup" routerLink="/signup"> Create Account ? Signup</a>
+            <div *ngIf="uniqueProblem">
+              <body text="red">{{message}}</body><p>
+              </div>
           </form>
          
           
