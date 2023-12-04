@@ -26,16 +26,17 @@ import { UserService } from "../user.service";
     userList: String[] = []
     emailList: String[] = []
 
+    constructor( private fb: FormBuilder, private router: Router, private httpClient: HttpClient, private userService: UserService ){
 
-    constructor(private router: Router, private httpClient: HttpClient, private userService: UserService ){
+    
       this.isSignUp==false
-      this.SignUpForm = new FormGroup({
-        'fullname': new FormControl( null),
-        'email': new FormControl(null),
-        'username':new FormControl(null),
-        'password':new FormControl(null),
-        'cPassword':new FormControl(null),
-        role:new FormControl(null)
+      this.SignUpForm = this.fb.group({
+        'fullname': ['',Validators.required],
+        'email': [''],
+        'username':[''],
+        'password':[''],
+
+        // role:new FormControl(null)
 
       });
       // this.SignUpForm.get('role')?.setValue("")
@@ -141,12 +142,12 @@ import { UserService } from "../user.service";
   
     }
 
-    goBackToLoginPage() {
+    // goBackToLoginPage() {
         
-    }
+    // }
   
-
   }
+  
 
   // @NgModule({
   //   imports: [
