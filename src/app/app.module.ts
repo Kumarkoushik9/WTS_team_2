@@ -25,8 +25,6 @@ import { ProcalendarsComponent } from './procalendars/procalendars.component';
 import { HomePageComponent } from './homepage/homepage.component';
 import { SignupModule } from './signup/signup.component.module';
 
-import { LoginService } from './services/login_service';
-
 @NgModule({
   declarations: [
     AppComponent,
