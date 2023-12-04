@@ -38,7 +38,7 @@ import { LoginService } from './services/login_service';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    SignupModule
+    SignupModule,
     MatIconModule,
     FormsModule,
     HttpClientModule,
