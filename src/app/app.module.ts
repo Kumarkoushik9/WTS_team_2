@@ -25,6 +25,7 @@ import { SignupModule } from './signup/signup.component.module';
 
 
 
+
 // import { LoginService } from './services/login_service';
 import { ChatComponent } from './chat/chat.component';
 import { MessageComponent } from './message/message.component';
@@ -32,7 +33,6 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ProcalendarsComponent } from './procalendars/procalendars.component';
 import { CustomWorkoutVideosComponent } from 'src/custom_workouts/custom_workouts.component';
 import { MatSelectModule } from '@angular/material/select';
-
 
 
 @NgModule({

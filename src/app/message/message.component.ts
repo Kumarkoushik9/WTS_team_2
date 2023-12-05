@@ -27,6 +27,11 @@ export class MessageComponent implements OnInit{
     .subscribe(list => {
       console.log(list)
       this.messages = list
+      for(let m in this.messages){
+        if (this.messages[m][0] == 'T2Admin'){
+          this.messages[m][0] = 'Help'
+        }
+      }
     })
   }
 
@@ -59,7 +64,7 @@ export class MessageComponent implements OnInit{
       }
     }
     this.toMessage = "";
-    setTimeout(this.reload, 3000);
+    //setTimeout(this.reload, 3000);
     
   }
 
