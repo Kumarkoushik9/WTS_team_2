@@ -16,14 +16,23 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './services/login_service';
-import { ChatComponent } from './chat/chat.component';
-import { MessageComponent } from './message/message.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { ProcalendarsComponent } from './procalendars/procalendars.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 // import { LoginService } from './services/login_service';
 import { HomePageComponent } from './homepage/homepage.component';
 import { SignupModule } from './signup/signup.component.module';
+
+
+
+
+// import { LoginService } from './services/login_service';
+import { ChatComponent } from './chat/chat.component';
+import { MessageComponent } from './message/message.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ProcalendarsComponent } from './procalendars/procalendars.component';
+import { CustomWorkoutVideosComponent } from 'src/custom_workouts/custom_workouts.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -35,7 +44,7 @@ import { SignupModule } from './signup/signup.component.module';
     MessageComponent,
     CalendarComponent,
     ProcalendarsComponent,
-
+    CustomWorkoutVideosComponent,
     HomePageComponent,
     
     ChatComponent,
@@ -58,6 +67,9 @@ import { SignupModule } from './signup/signup.component.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatSelectModule
 
   ],
   providers: [ ],
