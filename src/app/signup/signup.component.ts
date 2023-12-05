@@ -132,7 +132,7 @@ import { LoginService } from "../services/login_service";
           this.uniqueProblem = true;
       }
       if(!this.uniqueProblem){
-        this.httpClient.post('http://127.0.0.1:5000/insert', input_data)
+        this.httpClient.post('https://api-4hj0.onrender.com/insert', input_data)
       // this.loginservice.create_account(input_data)
         .subscribe((data: any) => {
           console.log(data);

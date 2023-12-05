@@ -10,18 +10,18 @@ export class ChatServiceService {
   constructor(private httpClient: HttpClient) { }
 
   getChatList(user: String): Observable<String[]>{
-    const list = this.httpClient.get<String[]>('http://127.0.0.1:5000/chat/'+user)
+    const list = this.httpClient.get<String[]>('https://api-4hj0.onrender.com/chat/'+user)
     return list
   }
 
   getMessagesBetween(userOne: String, userTwo: String): Observable<String[][]>{
-    const list = this.httpClient.get<String[][]>('http://127.0.0.1:5000/chat/'+userOne+'/'+userTwo)
+    const list = this.httpClient.get<String[][]>('https://api-4hj0.onrender.com/chat/'+userOne+'/'+userTwo)
     return list
   }
 
   sendMessage(userOne: String, userTwo: String, message: String){
     const inputData = [userOne, userTwo, message];
-    return this.httpClient.post('http://127.0.0.1:5000/message', inputData)
+    return this.httpClient.post('https://api-4hj0.onrender.com/message', inputData)
     .subscribe((data: any) => {
       console.log(data)
     });
