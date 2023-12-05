@@ -26,14 +26,6 @@ import { HomePageComponent } from './homepage/homepage.component';
 import { SignupModule } from './signup/signup.component.module';
 
 
-
-// import { LoginService } from './services/login_service';
-import { ChatComponent } from './chat/chat.component';
-import { MessageComponent } from './message/message.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { ProcalendarsComponent } from './procalendars/procalendars.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,
