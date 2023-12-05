@@ -72,7 +72,8 @@ export class CalendarComponent implements OnInit {
       console.log(Number(ymd[0]) + Number(ymd[1]) + Number(ymd[2]))
       var user = this.route.snapshot.paramMap.get('user');
       this.userService.postEvent(String(user), Number(ymd[0]), Number(ymd[1]), Number(ymd[2]), String(this.eventName))
-      setTimeout(this.reload, 2000)
+      this.swapAddEvent()
+      this.eventName = ""
     }
   }
 
