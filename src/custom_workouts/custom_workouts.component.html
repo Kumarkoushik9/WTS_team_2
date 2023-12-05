@@ -1,39 +1,63 @@
+
 <div class="container">
     <div class="cls1">
-        <h2> Custom Workouts</h2>
-        <p> “When you have a clear vision of your goal, it’s easier to take the first step toward it.”</p>
+        <h2> Workout Videos</h2>
+        <p> Follow these Videos to Stay Fit and Healthy</p>
     </div>
-    <div class="main">
-        <br>
-        <p style="padding-left: 30px; "> Please Fill the form below and click on search button to get personalized custom workouts.</p>
-        
-            <form  fxLayoutAlign="stretch" fxLayout="column" class="form-div" style="padding-left: 70px;">
+    <div class="sam">
+        <mat-card fxFlex="25" >
+            <mat-toolbar color="primary" class="toolbar" style="height: 80px;"> Edit your Workouts </mat-toolbar>
+            <form  fxLayoutAlign="stretch" fxLayout="column" class="form-div">
+                <mat-form-field >
+                  
+                  <input matInput placeholder="Title" >
+                </mat-form-field>
               
-                
-                <input matInput placeholder="Age"  class="input" style="padding-left: 100px;">
-                &nbsp;
-                &nbsp;
-                
-                <input matInput  placeholder=" Course Duration in Days" class="input" style="width: 170px;">
-                &nbsp;
-                &nbsp;
-                <button mat-raised-button type="submit" routerLink="/login" style="height: 40px; width: 130px;" > Search </button>
-                <br>
-                
-            </form>
-            
-            
-         
-         
-         
-         
-           
-          
-        
+                <mat-form-field >
+                 
+                  <input matInput  placeholder="description">
+                </mat-form-field>
+                <mat-form-field >
+                 
+                    <input matInput  placeholder="Difficulty">
+                  </mat-form-field>
+                  <!-- <mat-form-field >
+                 
+                    <input matInput  placeholder="Traning Type">
+                  </mat-form-field> -->
+                  <mat-form-field>
+                    <mat-label>Training Type</mat-label>
+                    <mat-select>
+                      <mat-option value="option1">HIIT</mat-option>
+                      <mat-option value="option2">Pilates</mat-option>
+                      <mat-option value="option3">Cardiovascular</mat-option>
+                      <mat-option value="option3">Strength Training</mat-option>
 
+                    </mat-select>
+                  </mat-form-field>
 
+                  <!-- <div style=" padding-left: 1000px;  font-weight: bold;">
+                    <select class="custom-select" (change)="addRoutine($event)" formControlName="routine" style="padding-left: 900px; font-size: 16px; padding: 10px; background-color: rgb(151, 151, 163);">
+                      <option value="" style="padding-left: 900px; font-weight: bold;">Select a Routine</option>
+                      <option *ngFor="let routine of addRoutines" [ngValue]="routine">{{routine}}</option>
+                    </select>
+                    <br>
+                  </div> -->
+                <button mat-raised-button type="submit" routerLink="/customworkouts" >Submit</button>
+                <p></p>
+              </form>
 
+              
+        </mat-card>
 
-    </div>
-       
+    
+      </div>
+      <div style="margin-top: -500px; padding-left: 600px; ">
+        <img   src="../assets/images/grap.png" alt="Girl in a jacket" width="500" height="400">
+
+      </div>
+  
 </div>
+
+  
+  

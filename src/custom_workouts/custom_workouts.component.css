@@ -1,25 +1,92 @@
 .container {
-    max-width: 1350px;
-    margin: 0 auto;
-    /* padding: 0 20px; */
-    padding-top: 20px;
-    padding-left: 0%;
-    background-color: whitesmoke;
-    width: 10000px;
-    height: 800px;
-  }
-  .cls1{
-    text-align: center;
-    background-color: rgb(44, 63, 70);
-    color: white;
-    height: 100px;
-    padding-top: 6px;
-  }
-  .main{
-    padding-top: 20px;
-    
-  }
-  .input{
-    padding-left: 40px;
-    height: 30px;
-  }
+  max-width: 1350px;
+  margin: 0 auto;
+  /* padding: 0 20px; */
+  padding-top: 20px;
+  padding-left: 0%;
+  background-color: whitesmoke;
+  width: 10000px;
+  height: 800px;
+}
+.cls1{
+  text-align: center;
+  background-color: rgb(44, 63, 70);
+  color: white;
+  height: 100px;
+  padding-top: 6px;
+}
+.main{
+  padding-top: 20px;
+  
+}
+video{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.main-div mat-card{
+  background-color: aliceblue;
+  /* background-image: url('./login_page_background.jpeg'); */
+  padding: 0px;
+  width: 600px;
+ 
+}
+.mat-card{
+/* width: 1500px; */
+
+}
+ 
+.sam{
+  /* width: 1450px; */
+  height: 600px;
+  margin: 0 auto;
+  padding-top: 60px;
+  /* padding: 0 20px; */
+  /* padding-top: 20px; */
+  padding-left: 250px;
+  background-color: whitesmoke;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.dashboard {
+  background-color: rgb(62, 59, 74);
+  /* width: 97%; */
+  color: white;
+  padding-left: 0px;
+
+
+}
+
+.form-div{
+  padding:20px;
+  /* width: 300px; */
+  
+}
+.signup {
+  padding: 20px;
+}
+.toolbar{
+ text-align: center;
+}
+/* .mat-typography{
+  background-image: url('./login_page_background.jpeg');
+} */
+.login-div {
+  margin-top: 0px;
+  text-align: top;
+  font-style: italic;
+  font-size: large;
+}
+img {
+  display: inline-block;
+  /* width: 420px;
+  height: 370px; */
+  padding-left: 155px;
+  padding-top: 10px;
+}
