@@ -2,12 +2,10 @@
 import { Component, NgModule } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormControl, FormGroup, Validators,ReactiveFormsModule } from "@angular/forms";
 import {Router} from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { UserService } from "../user.service";
-import { LoginService } from "../services/login_service";
-
 
 
 @Component({
@@ -29,16 +27,19 @@ import { LoginService } from "../services/login_service";
     userList: String[] = []
     emailList: String[] = []
 
-    constructor(private loginservice : LoginService,private router: Router, private httpClient: HttpClient, private userService: UserService ){
+    constructor( private fb: FormBuilder, private router: Router, private httpClient: HttpClient, private userService: UserService ){
 
+    
       this.isSignUp==false
-      this.SignUpForm = new FormGroup({
-        'fullname': new FormControl( null),
-        'email': new FormControl(null),
-        'username':new FormControl(null),
-        'password':new FormControl(null),
-        'cPassword':new FormControl(null),
-        role:new FormControl(null)
+      this.SignUpForm = this.fb.group({
+        'fullname': ['',Validators.required],
+        'email': [''],
+        'username':[''],
+        'password':[''],
+
+        // role:new FormControl(null)
+
+
       });
       // this.SignUpForm.get('role')?.setValue("")
 
@@ -139,16 +140,16 @@ import { LoginService } from "../services/login_service";
         });
         this.router.navigate(['/login']);
       }
-   
+
   
     }
 
-    goBackToLoginPage() {
+    // goBackToLoginPage() {
         
-    }
+    // }
   
-
   }
+  
 
   // @NgModule({
   //   imports: [

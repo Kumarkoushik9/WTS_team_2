@@ -7,6 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 // import { LoginService } from '../services/login_service';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
+// import { loginservice } from './login.service';
 
 
 @Component({
@@ -16,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
   // providers: [LoginService]
 })
 export class LoginComponent {
+
 
   username?: String;
   password?: String;
@@ -46,20 +49,23 @@ export class LoginComponent {
       this.uniqueProblem = true
     }
 
+
   }
-  
  
+// onSubmit(){
+//   console.log("helloo")
+//   this.router.navigate(['/workouts']);
+//   // this.router.navigate(['/signup']);
+//   // this.loginService.getlogin()
+//   // .subscribe(list => {
+//   //   console.log(list)
+//   //   this.router.navigate(['/homepage']);
+//   // })
+// }
 
-  // onSubmit(input_data:any){
-
-  //   console.log(input_data)
-  //   console.log("Hello World")
-  //   this.loginservice.create_account(input_data)
-  //   .subscribe((data: any) => {
-        
-  //   });
-
-  // }
+onsub(){
+  this.router.navigate(['/homepage']);
+}
 
 
 }

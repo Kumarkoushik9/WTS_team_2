@@ -20,7 +20,9 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatToolbarModule,
     MatCardModule,
+
     CommonModule
+
   ],
   exports: [
     SignupComponent,

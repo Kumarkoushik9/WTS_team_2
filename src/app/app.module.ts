@@ -25,15 +25,23 @@ import { ProcalendarsComponent } from './procalendars/procalendars.component';
 import { HomePageComponent } from './homepage/homepage.component';
 import { SignupModule } from './signup/signup.component.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+
     ChatComponent,
     MessageComponent,
     CalendarComponent,
     ProcalendarsComponent,
+
     HomePageComponent,
+    
+    ChatComponent,
+    MessageComponent,
+    CalendarComponent,
+    ProcalendarsComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,7 @@ import { SignupModule } from './signup/signup.component.module';
     ReactiveFormsModule,
 
   ],
-  providers: [ LoginService],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
