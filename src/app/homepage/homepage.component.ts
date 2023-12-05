@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { UserService } from "../user.service";
 import { HomePageService } from "../services/home_page";
 import { every } from "rxjs";
 
@@ -13,7 +14,14 @@ import { every } from "rxjs";
     Isyoga: boolean = true;
     Isfitness: boolean = true;
     inp:string=''
-    constructor(){
+    curUser:string = ""
+    calendarLink:string = ""
+    chatLink:string = ""
+
+    constructor(private userService: UserService){
+      this.userService.getCurUser.subscribe(usr => this.curUser = usr)
+      this.calendarLink = "/calendar/" + this.curUser
+      this.chatLink =  "/chat/" + this.curUser
       this.inp=""
     }
 
