@@ -7,7 +7,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 // import { LoginService } from '../services/login_service';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
 // import { loginservice } from './login.service';
 
 
