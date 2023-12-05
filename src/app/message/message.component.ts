@@ -64,7 +64,7 @@ export class MessageComponent implements OnInit{
       }
     }
     this.toMessage = "";
-    setTimeout(this.reload, 3000);
+    //setTimeout(this.reload, 3000);
     
   }
 
