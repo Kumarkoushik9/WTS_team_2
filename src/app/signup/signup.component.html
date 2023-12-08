@@ -1,77 +1,78 @@
-
-<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill class="main-div">
- 
-  <div class="container">
-    <div>
-    <header class="dashboard">
-      <h2 style="padding-left: 400px;"> SIGN UP PAGE </h2>
-      </header>
-    </div>
-    <!-- <title><h1 class="login-div" > WELLNESS TRACKING SYSTEM</h1></title> -->
-  <div>
-
-
- <div fxLayout="row" class="col1" >
-  <div class="sam"  fxFlex="50%" style="padding-left: 140px;"> 
-    <mat-card  >
-      <mat-toolbar color="primary" class="toolbar" style="padding-left: 30px;">
-        Sign Up and Join Us
+<div fxLayout="row" fxLayoutAlign="center center" fxFlexFill class="main-div" > 
+  <!-- <div class="login-header"> -->
+   <h2 class="login-header"> WELLNESS TRACKING SYSTEM</h2>
+  <!-- </div> -->
+  <!-- <div class="colum-container"> -->
+   <div fxFlex="30%" class="col1"> 
+   <mat-card >
+      <mat-toolbar color="primary" class="toolbar" style="display: block;">
+          Sign Up and Join Us
       </mat-toolbar>
-      <form fxLayoutAlign="stretch" fxLayout="column" class="form-div" [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
+       <form  fxLayoutAlign="stretch" fxLayout="column" class="form-div"  [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
+           <mat-form-field >
+             
+             <input matInput placeholder="Full Name" id="fullname" formControlName="fullname" >
+           </mat-form-field>
+           <mat-form-field >
+             
+              <!-- <input matInput placeholder="Last Name" >
+            </mat-form-field>
+            <mat-form-field > -->
+             
+              <input matInput placeholder="Email"  id="email" formControlName="email"
+              >
+            </mat-form-field>
+            <mat-form-field >
+             
+              <input matInput placeholder="Username" id="username"  formControlName="username"
+              >
+            </mat-form-field>
+         
+           <mat-form-field >
+            
+             <input matInput type="password" placeholder="Password" id="password"  formControlName="password" >
+           </mat-form-field>
+           <mat-form-field >
+              <input matInput type="password" placeholder="Confirm Password" id="cPassword" formControlName="cPassword">
+
+            </mat-form-field>
+
+              <select class="custom-select" (change)="changeRole($event)" formControlName="role" >
+                <option value="">Select your role</option>
+                <option *ngFor="let role of roles" [ngValue]="role">{{role}}</option>
+              </select>
+           <br>
+           <div *ngIf="uniqueProblem">
+              <body text="red">{{problemMessage}}</body><p>
+           </div>
+           <button mat-raised-button type="submit" >Sign Up</button>
+           <br>
+          
+         </form>
        
-        <!-- <mat-form-field style="padding-left:30px;"> -->
-          <input matInput placeholder="Full Name" id="fullname" formControlName="fullname" style="padding-left:30px; margin-bottom: 25px; font-size: medium;">
-        <!-- </mat-form-field> -->
-        
-        <!-- <mat-form-field style=" padding-left:30px; " > -->
-        <input matInput placeholder="Email"  id="email" formControlName="email"  style=" padding-left:30px; font-size: medium; margin-bottom: 25px;"> 
-      <!-- </mat-form-field> -->
-
-        <!-- <mat-form-field style=" padding-left:30px; "> -->
-        <input matInput placeholder="Username" id="username"  formControlName="username"  style=" padding-left:30px; font-size: medium; margin-bottom: 25px;">
-       <!-- </mat-form-field> -->
-
-
-        <!-- <mat-form-field style=" padding-left:30px; "> -->
-        <input matInput type="password" placeholder="Password" id="password"  formControlName="password"  style=" padding-left:30px; font-size: medium; margin-bottom: 25px;" >
-       <!-- </mat-form-field> -->
-
-        <!-- <mat-form-field style=" padding-left:30px; "> -->
-        <input matInput type="password" placeholder="Confirm Password"  style="padding-left:30px; font-size: medium; margin-bottom: 25px;">
-       <!-- </mat-form-field> -->
-
-       <div *ngIf="uniqueProblem">
-        <body text="red">{{problemMessage}}</body><p>
-        </div>
-        <!-- <mat-form-field style=" padding-left:30px; "> -->
-        <button mat-raised-button type="submit" routerLink="/login"  style="padding-left:30px; font-weight:bold; font-size: medium; width:150px; background-color: rgb(122, 122, 123); margin-bottom: 25px;">Sign Up</button>
-      <!-- </mat-form-field> -->
-      </form>
-  </mat-card>
- 
+         
+   </mat-card>
   </div>
-  <div  class="col2" fxFlex="50%" style="margin-top: -500px; padding-left: 700px;">
-    <p style="font-weight:bold; margin-left: 90px;" class="title" >Key Points:</p>
-    <br>
-    <ul class="textarea">
+   <div fxFlex="30%" class="clo2">
+      <p style="font-weight:bold " class="title">Key Points :</p>
+      <br>
+      <!-- <textarea class="textarea"> -->
       <ul class="textarea">
-        <li >Customizable Fitness Calender </li>
-        <br>
-        <li >Daily Progress Tracking </li>
-        <br>
-        <li >Favourite Workout Videos </li>
-        <br>
-        <li > 24/7 Community Support  </li>
-        <br>
-        <li > Helpful health, nutrition and fitness information </li>
-        <br>
-        <li > and much,much more... </li>
-      </ul>
-    </ul>
-   
+          <li >Customizable Fitness Calendar </li>
+          <br>
+          <li >Daily Progress Tracking </li>
+          <br>
+          <li >Favourite Workout Videos </li>
+          <br>
+          <li > 24/7 Community Support  </li>
+          <br>
+          <li > Helpful health, nutrition and fitness information </li>
+          <br>
+          <li > and much,much more... </li>
+        </ul>
+      
+          
+          <!-- style="width:90%"></textarea> -->
+  </div>
 
- 
 </div>
-</div>
-</div>
-
