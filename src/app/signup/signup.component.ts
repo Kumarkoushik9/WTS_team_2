@@ -1,4 +1,3 @@
-
 import { Component, NgModule } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
@@ -28,21 +27,18 @@ import { UserService } from "../user.service";
     emailList: String[] = []
 
     constructor( private fb: FormBuilder, private router: Router, private httpClient: HttpClient, private userService: UserService ){
-
-    
       this.isSignUp==false
-      this.SignUpForm = this.fb.group({
-        'fullname': ['',Validators.required],
-        'email': [''],
-        'username':[''],
-        'password':[''],
-
-        // role:new FormControl(null)
-
+      this.SignUpForm = new FormGroup({
+        'fullname': new FormControl( null),
+        'email': new FormControl(null),
+        'username':new FormControl(null),
+        'password':new FormControl(null),
+        'cPassword':new FormControl(null),
+        role:new FormControl(null)
 
       });
-      // this.SignUpForm.get('role')?.setValue("")
-
+      this.SignUpForm.get('role')?.setValue("")
+      
     }
     ngOnInit() {
       // this.SignUpForm = new FormGroup({
@@ -149,14 +145,4 @@ import { UserService } from "../user.service";
     // }
   
   }
-  
-
-  // @NgModule({
-  //   imports: [
-  //     // other imports
-  //     ReactiveFormsModule,
-  //   ],
-  //   declarations: [SignupComponent],
-  // })
-  // export class SignupModule { }
 
